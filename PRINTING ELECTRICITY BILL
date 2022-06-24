@@ -1,0 +1,50 @@
+#include <stdio.h>
+int main(){
+    int units;
+    float amount,charge,total_amount;
+    //Asking for inputs
+
+    printf("Enter total no.of units consumed :- ");
+    scanf("%d",&units);
+
+    //Calculating electricity bill---
+
+    if(0<units<50){
+        amount= units*1.50;
+        charge = 30;
+    }
+    else if(50<units<100){
+        amount = units*2.00;
+        charge = 50;
+    }
+    else if(100<units<150){
+        amount = units*2.50;
+        charge = 70;
+    }
+    else if(150<units<200){
+        amount = units*3.00;
+        charge = 100;
+    }
+    else if(200<units<250){
+        amount = units*3.50;
+        charge = 120;
+    }
+    else if(250<units<300){
+        amount = units*4.00;
+        charge = 150;
+    }
+    else if(300<units<350){
+        amount = units*4.5;
+        charge = 170;
+    }
+    else {
+        amount=units*5.00;
+        charge=200;
+    }
+
+    //Displaying output---
+    total_amount=amount+charge;
+    printf("Electricity Bill = %.2f",total_amount);
+
+    return 0;
+}
